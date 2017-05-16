@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+5.times do |num|
+  Todo.create(title: "Todo Number #{num}", description: "this a very simple description number #{num}")
+  Item.create(body: "I am Item number #{num}", done: false, todo_id: num)
+  Item.create(body: "I am Item number #{num}", done: false, todo_id: 2)
+  Item.create(body: "I am Item number #{num}", done: false, todo_id: 2)
+end
